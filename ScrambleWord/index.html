@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrambleWord</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Guess the Word Game</h1>
+    </div>
+    <div class="container">
+        <div class="subheading">
+            <h2>Your Task is to Reorder the word!</h2>
+        </div>
+        <div class="scramb-word">
+            <span id="s-word-space">eedpak</span>
+        </div>
+        <div class="message">
+            <span id="hint">Press Here for Hint
+                <!-- word start with <em>a</em> and end with <em>b</em> -->
+            </span>
+            <br>
+            <span id="final-msg" class="utility">Hurre! Your Guess is right :)</span>
+        </div>
+        <div class="input-word">
+            <input type="text" id="r-word-space" placeholder="Write your word here">
+        </div>
+        <div class="submit">
+            <input type="submit" id="submit-btn" value="Guess">
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

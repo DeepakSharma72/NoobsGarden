@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.head-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 8vh;
+    font-size: 4vh;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px salmon;
+    background-color: #e1e488;
+}
+
+.body {
+    box-sizing: border-box;
+    background-image: url('img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw 92vh;
+    min-width: 100vw;
+    min-height: 92vh;
+    padding-top: 30px;
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+.board {
+    display: inline-block;
+    max-height: 85vh;
+    min-height: 85vh;
+    max-width: 55vw;
+    min-width: 55vw;
+    border: 2px solid purple;
+    margin-left: 12vw;
+    background: linear-gradient(#8e9044, #c2e621);
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(25, 1fr);
+}
+
+.snake {
+    background-color: purple;
+    border-radius: 10px;
+}
+
+.food {
+    background-color: yellow;
+}
+
+.special-food {
+    background-color: aquamarine;
+    /* background-image: url('img/machar.jpeg'); */
+    /* background-size: cover; */
+    border-radius: 10px;
+    /* filter: invert(100%); */
+}
+
+.head {
+    background-color: red;
+}
+
+.score-board {
+    display: inline-block;
+    width: 30vw;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+}

@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.tic-tac-nav {
+    font-family: 'Dancing Script', cursive;
+    /* font-family: 'Abril Fatface'; */
+    min-height: 50px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+
+.tic-tac-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 2rem; */
+    color: gold;
+    margin-left: 20px;
+    font-size: 1.8em;
+    text-shadow: 2px 2px 3px #17ffb4;
+}
+
+.tic-tac-heading {
+    text-align: center;
+    font-size: 45px;
+    margin: 30px 0;
+    font-weight: 900
+}
+
+.tic-tac-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    min-width: 30vw;
+    min-height: 30vw;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.grid-item:hover {
+    background-color: rgba(231, 225, 235, 0.849);
+}
+
+.down-bord {
+    border-bottom: 2px solid black;
+}
+
+.right-bord {
+    border-right: 2px solid black;
+}
+
+#turn-container {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+#candidate {
+    color: red;
+}
+
+#candidate :hover {
+    color: black;
+    cursor: pointer;
+}
+
+.tic-tac-function {
+    width: 40vw;
+}
+
+.reset-btn {
+    width: 150px;
+    height: 50px;
+    border-radius: 14px;
+    color: gold;
+    background-color: blueviolet;
+    border: 3px solid gold;
+    font-size: 25px;
+    font-weight: bolder;
+    display: block;
+    margin: 20px auto;
+}
+
+.reset-btn:hover {
+    background-color: rgb(132, 0, 255);
+    color: goldenrod;
+    border: 3px solid goldenrod;
+    cursor: pointer;
+}
+
+#exicetd-gif {
+    margin: 20px 110px;
+}
+
+.utility {
+    display: none;
+}

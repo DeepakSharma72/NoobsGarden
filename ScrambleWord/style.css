@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(78, 182, 83);
+}
+
+.heading {
+    height: 15vh;
+    background-color: rgb(11, 83, 14);
+    color: wheat;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.utility {
+    display: none;
+}
+
+.container {
+    padding: 2%;
+    min-height: 65vh;
+    width: 50vw;
+    margin-top: 15vh;
+    position: absolute;
+    left: 25vw;
+    background-color: rgb(11, 83, 14);
+    color: white;
+    font-size: 1.3rem;
+}
+
+.subheading {
+    text-align: center;
+    padding: 2%;
+}
+
+.scramb-word {
+    position: relative;
+    left: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    padding: 1%;
+    margin: 3%;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    background-color: rgb(38, 189, 88);
+}
+
+.message {
+    text-align: center;
+    padding: 18px;
+    margin: 3%;
+}
+
+#hint {
+    color: rgb(255, 174, 0);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#hint:hover {
+    color: rgb(226, 173, 57);
+}
+
+#final-msg {
+    font-size: 1.5rem;
+    color: greenyellow;
+}
+
+.input-word {
+    text-align: center;
+    margin: 20px;
+}
+
+.input-word input {
+    width: 50%;
+    font-size: 1.5rem;
+    padding: 12px;
+    border-radius: 30px;
+}
+
+.submit {
+    text-align: center;
+}
+
+#submit-btn {
+    width: 20%;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 30px;
+    color: rgb(26, 59, 6);
+    background-color: rgb(209, 79, 79);
+}
+
+@media only screen and (max-width: 635px) {
+    .heading {
+        font-size: 1.2rem;
+    }
+    .subheading {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+    .container {
+        padding: 5%;
+        font-size: 1rem;
+        left: 10vw;
+        width: 80vw;
+    }
+    #submit-btn {
+        width: 40%;
+    }
+    .input-word input {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-height: 550px) {
+    .container {
+        min-height: 100%
+    }
+}
+
+@media only screen and (max-height: 350px) {
+    .container {
+        min-height: 140%
+    }
+}

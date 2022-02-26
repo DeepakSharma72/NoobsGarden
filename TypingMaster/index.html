@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HappyTyping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mainDiv">
+        <div class="heading">
+            <h1>Test You Typing Speed</h1>
+        </div>
+        <div class="msg utility">
+            <h2>You Speed is <span id="errormsg">50</span>WpM.(Total Words:<span id="totword">33</span>,Wrong Words:<span id="wrngword">55</span>)</h2>
+        </div>
+        <div class="timestamp">
+            <span>
+            <select id="settime" disabled>
+                <option value="30">30</option>
+                <option selected value="60">60</option>
+                <option value="120">120</option>
+            </select>
+
+            <input type="button" id = "timesaver" value="Edit">
+            </span>
+            <br>
+            <span id="time">60</span>
+        </div>
+        <div class="readingboard" id="board1">
+            <span id="rdone"></span><span id="rleft"></span>
+        </div>
+        <div class="writingboard" id="board2" contenteditable="true">
+
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="tic-tac-nav">
+        <div class="tic-tac-item">MyTicTacToe.com</div>
+    </div>
+    <div class="tic-tac-heading"> Welcome to My Tic Tac Toe Mania
+    </div>
+    <div class="tic-tac-container">
+        <div class="game-grid">
+            <div class="box grid-item right-bord down-bord" id="box1"></div>
+            <div class="box grid-item right-bord down-bord"></div>
+            <div class="box grid-item down-bord"></div>
+            <div class="box grid-item right-bord down-bord"></div>
+            <div class="box grid-item right-bord down-bord"></div>
+            <div class="box grid-item down-bord"></div>
+            <div class="box grid-item right-bord"></div>
+            <div class="box grid-item right-bord"></div>
+            <div class="box grid-item"></div>
+        </div>
+        <div class="tic-tac-function">
+            <div id="turn-container">This is a Turn of <span id="candidate">&nbsp; O </span></div>
+            <img src="excited.gif" class="utility" id="exicetd-gif">
+            <input type="button" placeholder="Reset" value="Reset" class="reset-btn" onclick="resetGrid()">
+        </div>
+
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>

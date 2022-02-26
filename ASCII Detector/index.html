@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Code Detector</title>
+    <style>
+        h1 {
+            display: flex;
+            justify-content: center;
+            font-weight: bolder;
+            font-size: 1.6cm;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        
+        .Code-val {
+            margin: auto;
+            height: 30vh;
+            width: 35vw;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12vh;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        .Character {
+            margin: auto;
+            height: 10vh;
+            width: 55vw;
+            margin-top: 4vh;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 6vh;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        ASCII Code Detector
+    </h1>
+    <div class="Code-val" id="ans-box">Ascii code</div>
+    <div class="Character" id="char-box">Character</div>
+</body>
+<script>
+    window.addEventListener('keypress', function(e) {
+        let char = e.key;
+        let ascicode = e.charCode;
+        document.getElementById('ans-box').innerHTML = `${ascicode}`;
+        document.getElementById('char-box').innerHTML = `'${char}'`;
+        console.log(char, " ", ascicode);
+    });
+</script>
+
+</html>
