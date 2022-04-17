@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Styling NavBar */
+
+.navbaroutercover {
+    background-color: rgb(6, 6, 79);
+}
+
+.navbar {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 1.2rem;
+    background-color: rgb(6, 6, 79);
+}
+
+.navbar a {
+    color: #fff;
+}
+
+.navbar a:hover {
+    color: rgb(189, 200, 209);
+}
+
+.nav-link {
+    margin: 0 12px;
+}
+
+#login-btn a {
+    padding: 5px 12px;
+    border: 2px solid gold;
+    border-radius: 24px;
+    box-shadow: 1px 1px 2px goldenrod;
+}
+
+#login-btn a:hover {
+    background-color: rgb(29, 29, 99);
+}
+
+.navbar-brand {
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+}
+
+.navbar-brand i {
+    font-size: 1.3rem;
+}
+
+.fa-dharmachakra {
+    color: white;
+    animation: rotation 10s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+/* Home styling */
+.homesection {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.homesection h2 {
+    font-size: 1.7rem;
+    font-weight: bolder;
+}
+
+.homesection p {
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+.homesection button {
+    font-weight: bold;
+    background-color: gainsboro;
+    padding: 6px 15px;
+    border-radius: 6px;
+    border: 1px solid black;
+}
+
+.homesection button:hover {
+    background-color: black;
+    border: 1px solid gainsboro;
+    color: gainsboro;
+    box-shadow: 1px 1px 2px black !important;
+}
+
+.gaming-head h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    margin-bottom: 3rem;
+}
+
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    margin-bottom: 2rem;
+}
+
+.card:hover {
+    border: 2px solid black;
+}
+
+.card-body button {
+    font-weight: bold;
+    background-color: gainsboro;
+    padding: 6px 35px;
+    border-radius: 6px;
+    position: relative;
+    left: 32%;
+    border: 1px solid black;
+    color: black;
+}
+
+.card-body a {
+    text-decoration: none;
+}
+
+.card-body button:hover {
+    background-color: black;
+    border: 1px solid gainsboro;
+    color: gainsboro;
+    box-shadow: 1px 1px 2px black !important;
+}
+
+.about-section h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    margin-bottom: 3rem;
+}
+
+.about-section p {
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+.about-section-img img {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.links h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    /* color: blue; */
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+
+.links a {
+    text-decoration: none;
+}
+
+.links div {
+    display: flex;
+    justify-content: center;
+    border-radius: 40px;
+    background-color: black;
+}
+
+.links a i {
+    color: wheat;
+    font-size: 2rem;
+    margin: 16px;
+}
+
+.footer-bar {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 10px 14px;
+    background-color: rgb(6, 6, 79);
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-bar-outer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

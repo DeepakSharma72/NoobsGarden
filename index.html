@@ -5,162 +5,276 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NoobsGarden</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            /* box-sizing: border-box; */
-        }
-        
-        .nav-bar {
-            min-height: 50px;
-            color: gold;
-        }
-        
-        .b-name {
-            float: left;
-            display: inline;
-            padding: 10px;
-            font-size: xx-large;
-            line-height: 20px;
-        }
-        
-        .nav-bar .nav-item-container {
-            float: right;
-            display: flex;
-            margin-right: 30px;
-            /* position: absolute; */
-        }
-        
-        .nav-item {
-            padding: 10px;
-        }
-        
-        .games {
-            margin-top: 50px;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        
-        .game-item {
-            /* border: 1px solid red; */
-            width: 280px;
-            height: 250px;
-            margin: 80px;
-            transition: all 1s;
-        }
-        
-        .game-item img {
-            width: 280px;
-            height: 250px;
-            transition: all 1s;
-        }
-        
-        .game-item img:hover {
-            width: 220px;
-            height: 200px;
-            border-radius: 60px;
-        }
-        
-        .game-item:hover {
-            z-index: 10;
-            height: 200px;
-            width: 220px;
-        }
-        
-        .game-item figcaption {
-            text-decoration: none;
-            color: wheat;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: larger;
-            font-weight: bolder;
-        }
-        
-        .bg {
-            background-image: url("bg.jpg");
-            background-size: cover;
-            min-height: 130vh;
-            width: 98.6vw;
-            filter: blur(10px);
-            /* position: absolute; */
-        }
-        
-        .classup {
-            z-index: 10px;
-            position: absolute;
-            top: 0%;
-        }
-    </style>
+    <!-- Bootstrap 5 link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- Font awesoms icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Noobs Garden</title>
 </head>
 
 <body>
-    <div class="bg">
+    <div class="container-fluid navbaroutercover">
+        <!-- Navbar -->
+        <div class="row">
+            <div class="col-10 mx-auto">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">N<i class="fa-solid fa-dharmachakra"></i><i
+                                class="fa-solid fa-dharmachakra"></i>bs G<i class="fa-brands fa-apple"></i>rden</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon" style="background-color: antiquewhite;"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#game-head-id">Games</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#author-id">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
     </div>
-    <div class="classup">
-        <div class="nav-bar">
-            <div class="b-name">Noobs Garden</div>
-            <div class="nav-item-container">
-                <div class="nav-item">Home</div>
-                <div class="nav-item">About Us</div>
-                <div class="nav-item">Services</div>
-                <div class="nav-item">Contact Us</div>
-            </div>
-        </div>
-        <div class="games">
-            <div class="game-item">
-                <a href="./Snake Game/index.html" target="_blank" rel="noopener noreferrer">
-                    <figure>
-                        <img src="snake.jpg" alt="snake game">
-                        <figcaption>Snake Game</figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="game-item">
-                <a href="./RacingCar/index.html" target="_blank" rel="noopener noreferrer">
-                    <figure>
-                        <img src="car.jpg" alt="Car Racing game">
-                        <figcaption>Car Racing Game</figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="game-item">
-                <a href="./Tic Tac Toe/" target="_blank" rel="noopener noreferrer">
-                    <figure>
-                        <img src="tictac.jpeg" alt="Tic Tac Toe game">
-                        <figcaption>Tic Tac Toe Game</figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="game-item">
-                <a href="./ScrambleWord/index.html" target="_blank" rel="noopener noreferrer">
-                    <figure>
-                        <img src="scaramble.jpeg" alt="Scramble's Word game">
-                        <figcaption>Scramble Word Game</figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="game-item">
-                <a href="./TypingMaster/index.html" target="_blank" rel="noopener noreferrer">
-                    <figure>
-                        <img src="typing.jpeg" alt="TypingTest game">
-                        <figcaption>TypingTest game</figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="game-item">
-                <a href="./ASCII Detector/index.html" target="_blank" rel="noopener noreferrer">
-                    <figure>
-                        <img src="ascii.jpg" alt="ASCII Code Detector">
-                        <figcaption>ASCII Code Detector</figcaption>
-                    </figure>
-                </a>
-            </div>
-        </div>
+    <div class="container-fluid mt-5">
+        <!-- Home Section -->
+        <div class="row">
+            <div class="col-10 mx-auto shadow p-5">
+                <div class="row justify-content-evenly">
+                    <!-- About Noobs Garden -->
+                    <div class="col-10 col-lg-5 homesection mt-5">
+                        <h2 class="mb-3">
+                            Welcome to Noobs Garden <i class="fa-brands fa-accusoft"></i>
+                        </h2>
+                        <p class="p-2">
+                            Enjoy the childhood Games and
+                            relive your childhood Memories with Noobs Garden.
+                        </p>
+                        <button type="button" class="btn shadow">Get Started</button>
+                    </div>
+                    <!-- Slider -->
+                    <div class="col-10 col-lg-5 mx-auto mt-5">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="tictac.jpeg" class="d-block img-fluid mx-auto" alt="...">
+                                </div>
+                                <div class="carousel-item mx-auto">
+                                    <img src="snake.jpg" class="d-block img-fluid mx-auto" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="car.jpg" class="d-block img-fluid" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="typing.jpeg" class="d-block img-fluid" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="ascii.jpg" class="d-block img-fluid" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <hr class="mt-5 mb-5">
+                <!-- Main Gaming section -->
+                <div class="row justify-content-evenly mt-5" id="game-head-id">
+                    <div class="col-10 text-center gaming-head">
+                        <h2>Don't Wait, Play and Enjoy the Games <i class="fa-solid fa-gamepad"></i></h2>
+                    </div>
+                    <div class="col-11 mx-auto game-container justify-content-evenly">
 
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="tictac.jpeg" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Tic Tac Toe</h5>
+                                <hr>
+                                <p class="card-text">
+                                    It's a two player game in <b>(3 X 3)</b> grid one player has to mark '<b>0</b>' and
+                                    other one '<b>X</b>'.
+                                    The player who succeeds in placing three of their marks in a horizontal, vertical,
+                                    or diagonal row wins the game.
+                                </p>
+                            </div>
+                            <div class="card-body">
+                                <a href="Tic Tac Toe/index.html" target="_blank" class="card-link">
+                                    <button type="button" class="btn shadow">
+                                        Play
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="snake.jpg" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Snake Game</h5>
+                                <hr>
+                                <p class="card-text">
+                                    Snake is operated by <b>L, R, U & D</b> key. As snakes eats the insects size of
+                                    snake and score both increases. On hitting boundries or snake himself leads to end
+                                    of the game.
+                                </p>
+                            </div>
+                            <div class="card-body">
+                                <a href="Snake Game/index.html" target="_blank" class="card-link">
+                                    <button type="button" class="btn shadow">
+                                        Play
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="scaramble.jpeg" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Scrambe Word</h5>
+                                <hr>
+                                <p class="card-text">
+                                    Player need to guess the right word. If guess is right player wins the game.
+                                    If you need hints then hints are also availabe like starting and ending letter of
+                                    the word.
+                                    User can make infinite guesses untill right guess is not made.
+                                </p>
+                            </div>
+                            <div class="card-body">
+                                <a href="ScrambleWord/index.html" target="_blank" class="card-link">
+                                    <button type="button" class="btn shadow">
+                                        Play
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="car.jpg" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Racing Car</h5>
+                                <hr>
+                                <p class="card-text">
+                                    Player needs to save his/her car from other cars moving in the same direction(lesser
+                                    spped).
+                                    User can use <b>L & R</b> key to move car left and right.
+                                    Once your car hits any other car leads to game end.
+                                </p>
+                            </div>
+                            <div class="card-body">
+                                <a href="RacingCar/index.html" target="_blank" class="card-link">
+                                    <button type="button" class="btn shadow">
+                                        Play
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="typing.jpeg" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Typing Test</h5>
+                                <hr>
+                                <p class="card-text">
+                                    Player can set a time for test like <b> 30s, 60s </b> etc.
+                                    Then Paragraph will display user need to type words correct and faster.
+                                    On the basis of correct words and speed typing speed of user is calculated
+                                    in <b>WPM</b>(word per minute)
+                                </p>
+                            </div>
+                            <div class="card-body">
+                                <a href="TypingMaster/index.html" target="_blank" class="card-link">
+                                    <button type="button" class="btn shadow">
+                                        Play
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="ascii.jpg" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">ASCII Code Detector</h5>
+                                <hr>
+                                <p class="card-text">
+                                    We often require <b>ASCII Code</b> for charcter while solving coding questions
+                                    So,The instance you press any key on your keyboard ASCII Code for that character
+                                    will display on screen.
+                                </p>
+                            </div>
+                            <div class="card-body">
+                                <a href="ASCII Detector/index.html" target="_blank" class="card-link">
+                                    <button type="button" class="btn shadow">
+                                        Play
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mt-5 mb-5">
+                </div>
+                <!-- About me section -->
+                <div class="col-10 mx-auto">
+                    <div class="row justify-content-evenly" id="author-id">
+                        <div class="col-10 col-lg-6">
+                            <div class="about-section-img p-3 text-center text-lg-start">
+                                <img src="author.jpeg" class="img-fluid shadow" alt="">
+                            </div>
+                        </div>
+                        <div class="col-10 col-lg-6 mb-5 mb-lg-0 about-section">
+                            <h2 class="mb-4">About Me <i class="fa-solid fa-user-secret"></i></h2>
+                            <p>
+                                I am <b>Deepak Sharma</b>.
+                                <br> I am persuing BTech in Computer Science Engineering <b>(CSE)</b> from <b>NIT
+                                    Delhi</b> currently I am in 2<sup>nd</sup> year and
+                                <br>I am <b>Full Stack Developer</b> and <b>Compititive Programmer</b>.
+                            </p>
+                            <div class="links">
+                                <h4>Scoial Profile Links: <i class="fa-solid fa-share-from-square"></i></h4>
+                                <div class="col-6">
+                                    <a href="http://" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                    <a href="http://" target="_blank"> <i class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mt-5 mb-5">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="conatiner-fluid mt-5">
+        <div class="row footer-bar-outer">
+            <div class="col-12 footer-bar">
+                <p>Noobs Garden is Developed by Deepak Sharma</p>
+            </div>
+        </div>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+<script src="script.js"></script>
 
 </html>
