@@ -1,14 +1,22 @@
+// direction objects tells the direction of snake
 let direction = { x: 0, y: 0 };
+
+// sounds used in the the games
 let foodSound = new Audio('music/food.mp3');
 let gameOver = new Audio('music/gameover.mp3');
 let move = new Audio('music/move.mp3');
 let gameMusic = new Audio('music/music.mp3');
 
+// location of the food in the snake board
 let food = { x: 6, y: 3 };
 
+// this array contains the board locations in which snake body is present
 let snakebody = [{ x: 16, y: 13 }];
-let lastPaintTime = 0;
 
+
+let lastPaintTime = 0, paintIntervalTime = 100;
+
+// snake board
 let board = document.getElementsByClassName('board');
 
 
@@ -26,13 +34,18 @@ function isCollid() {
     return false;
 }
 
+// snake board dimension
 let r1 = 2,
     r2 = 19;
 let c1 = 2,
     c2 = 23;
+
+// stores the game score
 let score = 0;
 
 function gameEngine() {
+
+    //case1:  game is over
     if (isCollid()) {
         gameOver.play();
         gameMusic.pause();
@@ -45,30 +58,37 @@ function gameEngine() {
         return;
     }
 
+    //case2: snake head is at food location 
     if (snakebody[0].x === food.x && snakebody[0].y == food.y) {
+
         foodSound.play();
+
+        // increase the score
         if (score % 40 == 0 && score != 0) {
             score += 20;
         } else {
             score += 5;
         }
+
+        // display the updated score
         document.getElementById('scoreRecord').innerHTML = `${score}`;
+
+        // append the one more block to snake body array in the starting and in the direction in which snake is moving 
         snakebody.unshift({ x: food.x + direction.x, y: food.y + direction.y });
+
+        // generate new food at random location
         food = { x: Math.round(c1 + (c2 - c1) * Math.random()), y: Math.round(r1 + (r2 - r1) * Math.random()) };
     }
 
-    // 1. update the snake and food.
+    // => moves the snake body.
     let n = snakebody.length;
     for (let i = n - 1; i > 0; i--) {
-        let temp = snakebody[i - 1];
         snakebody[i] = snakebody[i - 1];
     }
     snakebody[0] = { x: snakebody[0].x + direction.x, y: snakebody[0].y + direction.y };
 
 
-    // 2. display the snake and food.
-
-    // -> displaying snake
+    // -> displaying snake on snake board
     board[0].innerHTML = '';
     snakebody.forEach((ele, ind) => {
         let snakeEle = document.createElement('div');
@@ -82,7 +102,7 @@ function gameEngine() {
         board[0].appendChild(snakeEle);
     });
 
-    // -> displaying food
+    // -> displaying food on snake board
     let foodEle = document.createElement('div');
     foodEle.style.gridRowStart = food.y;
     foodEle.style.gridColumnStart = food.x;
@@ -96,18 +116,20 @@ function gameEngine() {
 
 function main(ctime) {
     window.requestAnimationFrame(main);
-    if ((ctime - lastPaintTime) / 1000 < 0.2) {
+
+    // if interval is less than paintIntervalTime then do nothing
+    if ((ctime - lastPaintTime) < paintIntervalTime) {
         return;
     }
-    // console.log(ctime / 1000);
+
     lastPaintTime = ctime;
     gameEngine();
 }
-
 window.requestAnimationFrame(main);
 
 
 
+// handling key press events and accordingly changing the direction
 window.addEventListener('keydown', (e) => {
     direction.x = 0, direction.y = 1;
     move.play();
@@ -115,7 +137,7 @@ window.addEventListener('keydown', (e) => {
         gameMusic.play();
         gameMusic.volume = 0.2;
     }
-    console.log(e.key);
+    // console.log(e.key);
     switch (e.key) {
         case "ArrowDown":
             direction.x = 0, direction.y = 1;
